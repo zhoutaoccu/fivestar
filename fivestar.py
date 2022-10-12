@@ -60,6 +60,7 @@ def draw_5_angle(aTurtle=None, start_pos=(0, 0), end_pos=(0, 10), radius=100, co
     size = radius * math.sin(math.pi / 5) / math.sin(math.pi * 3 / 10)  # 修正
     angle = math.degrees(math.atan2(end_pos[1] - start_pos[1], end_pos[0] - start_pos[0]))
     print(angle)
+    aTurtle.pencolor("yellow")
     aTurtle.penup()
     aTurtle.goto(start_pos)
     aTurtle.setheading(0)
