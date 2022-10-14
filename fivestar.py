@@ -7,6 +7,10 @@ Update on 2017/9/27
 @author: Zhoutaoccu
 #修正了五角星的边长和外接圆半径之间的关系；
 #修正了4小五角星朝向不正对大五角星的错误
+
+Update on 2022/10/14
+@author: vmomenv
+#修正了旗帜黑边和五角星黑边的问题；
 '''
 import turtle
 import math
@@ -60,6 +64,7 @@ def draw_5_angle(aTurtle=None, start_pos=(0, 0), end_pos=(0, 10), radius=100, co
     size = radius * math.sin(math.pi / 5) / math.sin(math.pi * 3 / 10)  # 修正
     angle = math.degrees(math.atan2(end_pos[1] - start_pos[1], end_pos[0] - start_pos[0]))
     print(angle)
+    aTurtle.pencolor("yellow")
     aTurtle.penup()
     aTurtle.goto(start_pos)
     aTurtle.setheading(0)
@@ -85,6 +90,7 @@ def draw_5_star_flag(times=20.0):
     # 画红旗
     aTurtle.penup()
     aTurtle.goto(-width / 2, height / 2)
+    aTurtle.pencolor("red")
     aTurtle.pendown()
     aTurtle.begin_fill()
     aTurtle.fillcolor('red')
