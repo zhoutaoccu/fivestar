@@ -7,6 +7,10 @@ Update on 2017/9/27
 @author: Zhoutaoccu
 #修正了五角星的边长和外接圆半径之间的关系；
 #修正了4小五角星朝向不正对大五角星的错误
+
+Update on 2022/10/14
+@author: vmomenv
+#修正了旗帜黑边和五角星黑边的问题；
 '''
 import turtle
 import math
@@ -86,6 +90,7 @@ def draw_5_star_flag(times=20.0):
     # 画红旗
     aTurtle.penup()
     aTurtle.goto(-width / 2, height / 2)
+    aTurtle.pencolor("red")
     aTurtle.pendown()
     aTurtle.begin_fill()
     aTurtle.fillcolor('red')
